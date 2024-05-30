@@ -1,0 +1,208 @@
+// Variables
+$primary-color: #007bff;
+$secondary-color: #6f9ace;
+$white-color: #fff;
+$gray-color: #dcdcdc;
+$dark-color: #0257bc;
+$font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin button-styles($bg-color, $border-color, $text-color) {
+  padding: 14px;
+  background-color: $bg-color;
+  border: 1px solid $border-color;
+  color: $text-color;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+
+
+// Common Styles
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-family;
+}
+
+.container {
+  @include flex-center;
+  justify-content: space-between;
+  background-color: whitesmoke;
+  padding: 8px 40px;
+}
+
+.button-group {
+  @include flex-center;
+  gap: 20px;
+}
+
+.button {
+  @extend .button-group;
+  padding: 8px;
+  background-color: $white-color;
+  border: 1px solid $white-color;
+  color: $primary-color !important;
+  font-weight: 600;
+}
+
+.btn1 { width: 80px; }
+.btn2 { width: 300px; }
+.btn3 { width: 180px; }
+
+.search-container {
+  @include flex-center;
+  gap: 20px;
+}
+
+.btn4 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid $gray-color;
+  background-color: $gray-color;
+}
+
+.search-container img {
+  width: 64px;
+  height: 64px;
+  background-color: rgb(52, 108, 228);
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: scale(1.08);
+  }
+}
+
+.intro {
+  @include flex-center;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 0 30px;
+}
+
+.logo img {
+  cursor: pointer;
+}
+
+.navigation {
+  @include flex-center;
+  gap: 20px;
+  color: $dark-color;
+}
+
+.navigation h3 {
+  cursor: pointer;
+}
+
+.line {
+  border: 1px solid whitesmoke;
+  margin-top: 25px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 100px;
+  padding: 10px;
+}
+
+.card {
+  width: 450px;
+  margin-bottom: 50px;
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: scale(1.03);
+  }
+
+  img {
+    width: 100%;
+    height: 220px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+  }
+
+  .card-content {
+    color: $dark-color;
+    background-color: $white-color;
+    border-radius: 0 0 8px 8px;
+    padding: 10px;
+    
+    i {
+      @include flex-center;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    h3 {
+      margin: 10px 0;
+    }
+  }
+}
+
+.pagination {
+  @include flex-center;
+  justify-content: flex-end;
+  padding: 8px 35px;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.pagination-button {
+  @include button-styles($secondary-color, $secondary-color, $dark-color);
+}
+
+.btn6, .btn9 {
+  @include button-styles(rgb(49, 49, 230), $secondary-color, $white-color);
+}
+
+.container5 {
+  @include flex-center;
+  justify-content: space-between;
+  align-items: center;
+  background-color: whitesmoke;
+  padding: 16px 80px;
+  margin-top: 8%;
+}
+
+.buttons2 {
+  @include flex-center;
+  gap: 20px;
+  padding-right: 35%;
+}
+
+.line1 {
+  border: 1px solid $gray-color;
+}
+
+.container6 {
+  @include flex-center;
+  justify-content: space-around;
+  color: #4E5D78;
+  background-color: whitesmoke;
+  padding: 20px 0;
+
+  h5 {
+    margin: 0 16px;
+  }
+
+  .word1 {
+    @include flex-center;
+    gap: 16px;
+  }
+}
+
+
